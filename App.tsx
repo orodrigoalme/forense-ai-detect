@@ -82,16 +82,6 @@ export default function App() {
           <div className="flex items-center gap-4">
              {/* Session Badge */}
              {!isInitializing && <SessionStatus stats={sessionStats} onRefresh={refreshStats} />}
-
-             <button 
-                type="button"
-                className="hidden md:flex items-center gap-2 text-sm text-slate-400 hover:text-white transition-colors cursor-help"
-                title="Documentação da API"
-                onClick={() => window.open('https://api.orodrigoalme.com/docs', '_blank')}
-             >
-                <FileText className="w-4 h-4" />
-                <span className="hidden lg:inline">Docs</span>
-             </button>
              
              {status === 'success' && (
                  <button 
